@@ -22,7 +22,7 @@ char  **ft_split(char *str)
   int k = 0;
   char **out;
 
-  out = (char **)malloc(1000 * sizeof(char));
+  out = (char **)malloc(1000 * sizeof(char *));
   while (str[i])
   {
     while (str[i] && str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
@@ -32,7 +32,7 @@ char  **ft_split(char *str)
       i++;
     if (i > j)
     {
-      out[k] = (char *)malloc(1000 * sizeof(char *));
+      out[k] = (char *)malloc(1000 * sizeof(char));
       ft_strncpy(out[k++], &str[j], i - j);
     }
   }
